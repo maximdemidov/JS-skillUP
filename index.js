@@ -43,8 +43,8 @@ function checkIfString(input) {
     return null;
   }
   
-  // console.log(getUserInput('string'));
-  // console.log(getUserInput('number'));
+  console.log(getUserInput('string'));
+  console.log(getUserInput('number'));
   
   function test(func, inputArgs = [], expectedResult) {
     const result = func(...inputArgs);
@@ -62,12 +62,12 @@ function checkIfString(input) {
     return false;
   }
   
-  test(getUserInput, ['number', () => 123], 123);
-  test(getUserInput, ['number', () => null], null);
-  test(getUserInput, ['number', () => '345'], 345);
-  test(getUserInput, ['number', () => 'asdfsadf'], null);
-  test(getUserInput, ['number', () => ''], null);
-  test(getUserInput, ['number', () => '345asdfasdf'], null);
+//   test(getUserInput, ['number', () => 123], 123);
+//   test(getUserInput, ['number', () => null], null);
+//   test(getUserInput, ['number', () => '345'], 345);
+//   test(getUserInput, ['number', () => 'asdfsadf'], null);
+//   test(getUserInput, ['number', () => ''], null);
+//   test(getUserInput, ['number', () => '345asdfasdf'], null);
   
   function checkIfTriangle(a = 0, b = 0, c = 0) {
     if (![a,b,c].every(checkIfNumber)) {
