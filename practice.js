@@ -62,22 +62,33 @@ class View {
 
         // Append the title, form, and todo list to the app
         this.app.append(this.title, this.form, this.todoList)
-    } 
+    }
 
-        // Create an element with an optional CSS class
-        createElement(tag, className) {
-            const element = document.createElement(tag)
-            if (className) element.classList.add(className)
+    get _todoText() {
+        return this.input.value
+    }
+    _resetInput() {
+        this.input.value = ''
+    }
 
-            return element 
-        }
+    // Create an element with an optional CSS class
+    createElement(tag, className) {
+        const element = document.createElement(tag)
+        if (className) element.classList.add(className)
 
-        // Retrieve an element from the DOM
-        getElement(selector) {
-            const element = document.querySelector(selector)
+        return element 
+    }
 
-            return element
-        }
+    // Retrieve an element from the DOM
+    getElement(selector) {
+        const element = document.querySelector(selector)
+
+        return element
+    }
+
+    displayTodos(todos) {
+        
+    }
 }
 
 
